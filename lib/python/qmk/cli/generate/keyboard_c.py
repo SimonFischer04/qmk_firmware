@@ -12,6 +12,7 @@ from qmk.constants import GPL2_HEADER_C_LIKE, GENERATED_HEADER_C_LIKE
 def _gen_led_config(info_data):
     """Convert info.json content to g_led_config
     """
+    print("TF")
     cols = info_data['matrix_size']['cols']
     rows = info_data['matrix_size']['rows']
 
@@ -53,6 +54,10 @@ def _gen_led_config(info_data):
     lines.append(f'  {{ {", ".join(flags)} }},')
     lines.append('};')
     lines.append('#endif')
+
+    print("LOL")
+
+    print(lines)
 
     return lines
 
